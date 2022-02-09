@@ -72,7 +72,7 @@ services:
 
   imageproxy: 
     image: willnorris/imageproxy
-    command: -baseURL http://nginx:9000/ -addr 0.0.0.0:8080 -cache s3://jincai/cache?endpoint=nginx:9000&disableSSL=1&s3ForcePathStyle=1
+    command: -baseURL http://nginx:9000/ -addr 0.0.0.0:8080 -cache memory -cache "s3://jincai/cache?endpoint=nginx:9000&disableSSL=1&s3ForcePathStyle=1"
     environment:
     - "AWS_ACCESS_KEY_ID=QA89SME74AJLZ8TT00AM"
     - "AWS_SECRET_KEY=+XeoIkm4ZD2lEQ1h75b7tc0G9MiMl8Bsg6ptfVPY"
